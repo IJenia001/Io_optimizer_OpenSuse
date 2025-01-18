@@ -6,7 +6,7 @@ set -e
 echo "Applying performance optimizations for openSUSE..."
 
 ### 1. Настройка параметров ядра через GRUB
-KERNEL_PARAMS="quiet splash spec_rstack_overflow=microcode mitigations=off"
+KERNEL_PARAMS="quiet splash spec_rstack_overflow=microcode"
 GRUB_CONFIG="/etc/default/grub"
 
 if grep -q "^GRUB_CMDLINE_LINUX_DEFAULT" "$GRUB_CONFIG"; then
